@@ -80,7 +80,7 @@ img {
   border-bottom: 1px solid white;
 }
 .navbar img {
-  width: 50px;
+  width: 60px;
 }
 
 .hero {
@@ -162,7 +162,7 @@ img {
 }
 
 .avatar {
-  width: 200px;
+  width: 180px;
 }
 
 .member-intro {
@@ -174,13 +174,13 @@ img {
 .skills-columns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: 80px;
   margin-bottom: 40px;
 }
 
 .skills-lists {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
