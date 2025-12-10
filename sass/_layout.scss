@@ -1,3 +1,5 @@
+/* ACCUEIL */
+
 .header{
     width: 100%;
 
@@ -24,11 +26,11 @@
             border-bottom: 1px solid white;
         }
     }
+    img{
+        width: 50px;
+    }
 }
 
-.navbar img{
-    width: 50px;
-}
 
 .hero{
     height: 100vh;
@@ -47,4 +49,72 @@
 .textbox{
     max-width: 480px;
     text-align: center;
+}
+
+
+/* SERVICES A PROPOS */
+
+.services {
+   padding: 100px 40px;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+
+   img{
+    width: 310px;
+   }
+
+  
+}
+
+.services-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.section-separator {
+  width: 60%;
+  margin-top: 80px;
+  border-bottom: 3px solid white;
+  border-radius: 100;
+}
+
+/* PROJECT A PROPOS */
+
+.projects {
+
+    margin-bottom: 100px;
+    h1{
+        margin-bottom: 80px;
+    }
+ 
+    
+}
+
+.project-item{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+
+}
+
+.project-infos{
+    text-align: center;
+}
+.project-item.reverse {
+    direction: rtl;
+}
+.project-item.reverse > * {
+    direction: ltr;
 }

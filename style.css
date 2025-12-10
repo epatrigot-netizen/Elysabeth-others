@@ -5,6 +5,7 @@ body {
   color: #FFFFFF;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 a {
@@ -20,14 +21,18 @@ h1 {
   font-size: 36px;
 }
 
-.btn, .btn-light {
+img {
+  border-radius: 20px;
+}
+
+.btn, .btn-layout, .btn-light {
   border: 1px solid #FFFFFF;
   color: white;
   padding: 12px 34px;
   text-decoration: none;
   font-weight: 600;
 }
-.btn:hover, .btn-light:hover {
+.btn:hover, .btn-layout:hover, .btn-light:hover {
   background: #FFFFFF;
   color: #212121;
   transition: 1s;
@@ -39,6 +44,11 @@ h1 {
   margin: 20px;
 }
 
+.btn-layout {
+  margin-top: 50px;
+}
+
+/* ACCUEIL */
 .header {
   width: 100%;
   position: absolute;
@@ -60,7 +70,6 @@ h1 {
 .navbar a:hover {
   border-bottom: 1px solid white;
 }
-
 .navbar img {
   width: 50px;
 }
@@ -80,6 +89,64 @@ h1 {
 .textbox {
   max-width: 480px;
   text-align: center;
+}
+
+/* SERVICES A PROPOS */
+.services {
+  padding: 100px 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.services img {
+  width: 310px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-separator {
+  width: 60%;
+  margin-top: 80px;
+  border-bottom: 3px solid white;
+  border-radius: 100;
+}
+
+/* PROJECT A PROPOS */
+.projects {
+  margin-bottom: 100px;
+}
+.projects h1 {
+  margin-bottom: 80px;
+}
+
+.project-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+}
+
+.project-infos {
+  text-align: center;
+}
+
+.project-item.reverse {
+  direction: rtl;
+}
+
+.project-item.reverse > * {
+  direction: ltr;
 }
 
 /*# sourceMappingURL=style.css.map */

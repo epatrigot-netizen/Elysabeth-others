@@ -20,3 +20,10 @@
     color: $primary;
     margin: 20px;
 }
+
+.btn-layout{
+    @extend .btn;
+    margin-top: 50px;
+        
+
+}
