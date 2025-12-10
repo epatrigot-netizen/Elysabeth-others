@@ -1,0 +1,22 @@
+.btn {
+    border: 1px solid $secondary;
+    color: white;
+    padding: 12px 34px;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+        background: $secondary;
+        color: $primary;
+        transition: 1s;
+    }
+
+}
+
+.btn-light {
+
+    @extend .btn;
+    background: $secondary;
+    color: $primary;
+    margin: 20px;
+}
