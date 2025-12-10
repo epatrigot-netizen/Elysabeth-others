@@ -80,12 +80,7 @@
 
 
 
-.section-separator {
-  width: 60%;
-  margin-top: 80px;
-  border-bottom: 3px solid white;
-  border-radius: 100;
-}
+
 
 /* PROJECT A PROPOS */
 
@@ -117,4 +112,37 @@
 }
 .project-item.reverse > * {
     direction: ltr;
+}
+
+/* TEAM ÉQUIPE */
+.team{
+    padding: 100px 40px 80px;
+}
+.team-member{
+    max-width: 90%;
+    margin:0 auto 100px;
+}
+.avatar{
+    width: 200px;
+}
+.member-intro{
+    max-width: 60%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.skills-columns{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+.skills-lists{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.skill-card{
+    background-color: $tertiary;
+    border-radius: 20px;
+    padding: 20px 18px;
 }

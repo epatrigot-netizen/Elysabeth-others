@@ -1,9 +1,10 @@
+@charset "UTF-8";
 body {
   background: #212121;
   font-size: 15px;
   font-family: "Montserrat", sans-serif;
   color: #FFFFFF;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   text-align: center;
 }
@@ -23,6 +24,14 @@ h1 {
 
 img {
   border-radius: 20px;
+}
+
+.section-separator {
+  width: 60%;
+  padding-top: 80px;
+  border-bottom: 3px solid white;
+  border-radius: 100;
+  margin: 0 auto;
 }
 
 .btn, .btn-layout, .btn-light {
@@ -113,13 +122,6 @@ img {
   align-items: center;
 }
 
-.section-separator {
-  width: 60%;
-  margin-top: 80px;
-  border-bottom: 3px solid white;
-  border-radius: 100;
-}
-
 /* PROJECT A PROPOS */
 .projects {
   margin-bottom: 100px;
@@ -147,6 +149,45 @@ img {
 
 .project-item.reverse > * {
   direction: ltr;
+}
+
+/* TEAM ÉQUIPE */
+.team {
+  padding: 100px 40px 80px;
+}
+
+.team-member {
+  max-width: 90%;
+  margin: 0 auto 100px;
+}
+
+.avatar {
+  width: 200px;
+}
+
+.member-intro {
+  max-width: 60%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.skills-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.skills-lists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.skill-card {
+  background-color: #424242;
+  border-radius: 20px;
+  padding: 20px 18px;
 }
 
 /*# sourceMappingURL=style.css.map */
