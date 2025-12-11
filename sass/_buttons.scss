@@ -1,4 +1,6 @@
 .btn {
+    border-radius: 20px;
+
     border: 1px solid $secondary;
     color: $secondary;
     padding: 12px 34px;
@@ -20,11 +22,30 @@
 
     color: $primary;
     margin: 30px;
+
+    &:hover{
+
+        background: linear-gradient(90deg, #ff7a00, #FF00AA, #BD00FB);
+        background-size: 200%;
+        animation: move 2s linear infinite;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
 
 .btn-layout{
     @extend .btn;
     margin-top: 50px;
+
+
+    &:hover{
+
         
+        background: linear-gradient(90deg, #ff7a00, #FF00AA, #BD00FB);
+        color: $secondary;
+        border: 0px;
+
+}
 
 }
