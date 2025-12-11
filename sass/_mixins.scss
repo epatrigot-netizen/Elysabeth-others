@@ -1,3 +1,5 @@
+@import 'variable';
+
 @mixin flex-center($justify: center, $align:center, $gap: null){
     display: flex;
     justify-content: $justify;
@@ -6,5 +8,37 @@
     @if $gap != null{
         gap: $gap;
     }
+}
+
+
+@mixin skill-card-hover(
+    $scale: 1.1,
+    $bg-color: $secondary,
+    $text-color: $primary, 
+    $transition-duration : 0.3s) {
+        transition: transform $transition-duration ease, 
+        background-color $transition-duration ease;
+        cursor: pointer;
+
+        h3, p {
+            transition: color $transition-duration ease;
+        }
+
+        img{
+            width: 50px;
+            transition: opacity $transition-duration ease;
+        }
+
+
+
+        &:hover {
+            transform: scale($scale);
+            background-color: $bg-color;
+            z-index: 10;
+
+            h3, p{
+                color: $text-color;
+            }
+        }
 }
 

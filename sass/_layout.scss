@@ -139,14 +139,49 @@
     padding: 100px 40px 80px;
 
     .team-member{
+
     max-width: 90%;
-    margin:0 auto 100px;
+    margin:20px auto 100px;
     }
 
-    .avatar{
+    .image-wrapper{
+        position: relative;
         width: 180px;
-    }
+        height: 180px;
+        margin: 0 auto;
 
+        .avatar{
+            width: 180px;
+            height: 180px;
+            display: block;
+            border-radius: 50%;
+            object-fit: cover;
+            position: relative;
+            z-index: 1;
+        }
+
+        .gradient-ring {
+            position: absolute;
+            z-index: 0;
+            border-radius: 50%;
+            inset: -8px;
+
+
+            background: linear-gradient(90deg, #ff7a00, #ff00aa, #bd00fb);
+            -webkit-mask: 
+                radial-gradient(farthest-side, transparent calc(100% - 8px), black 0);
+            mask: 
+                radial-gradient(farthest-side, transparent calc(100% - 8px), black 0);
+
+            filter: blur(4px);     
+            
+            pointer-events: none;
+
+            animation: rotateGlow 3s linear infinite; 
+        }
+
+
+    }
     .member-intro{
         max-width: 60%;
         margin: 0 auto;
@@ -170,6 +205,19 @@
         background-color: $tertiary;
         border-radius: 20px;
         padding: 20px 18px;
+        @include skill-card-hover(1.1, $secondary, $primary, 0.3s);
+    
+    }
+    .team-member-hero{
+        padding-bottom: 40px;
     }
 }
 
+@keyframes rotateGlow {
+    0% {
+transform: rotate(0deg);
+        }
+    100% {
+transform: rotate(360deg);
+        }
+}

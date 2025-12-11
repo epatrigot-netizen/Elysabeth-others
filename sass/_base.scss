@@ -23,6 +23,12 @@ p{
 h1 {
     font-size: 48px;
 }
+h2{
+    font-size: 30px;
+}
+h3{
+    line-height: 0.5rem;
+}
 img {
     border-radius: 20px;
 }
@@ -35,14 +41,13 @@ img {
 }
 
 .text-gradient{
-      background: linear-gradient(90deg, #ff7a00, #FF00AA, #BD00FB);
+    background: linear-gradient(90deg, #ff7a00, #FF00AA, #BD00FB);
   background-size: 200%;
   animation: move 2s linear infinite;
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  padding: 40px;
 }
 
 @keyframes move {

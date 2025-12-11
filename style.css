@@ -26,6 +26,14 @@ h1 {
   font-size: 48px;
 }
 
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  line-height: 0.5rem;
+}
+
 img {
   border-radius: 20px;
 }
@@ -44,7 +52,6 @@ img {
   animation: move 2s linear infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding: 40px;
 }
 
 @keyframes move {
@@ -203,10 +210,34 @@ img {
 }
 .team .team-member {
   max-width: 90%;
-  margin: 0 auto 100px;
+  margin: 20px auto 100px;
 }
-.team .avatar {
+.team .image-wrapper {
+  position: relative;
   width: 180px;
+  height: 180px;
+  margin: 0 auto;
+}
+.team .image-wrapper .avatar {
+  width: 180px;
+  height: 180px;
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+.team .image-wrapper .gradient-ring {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  inset: -8px;
+  background: linear-gradient(90deg, #ff7a00, #ff00aa, #bd00fb);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 8px), black 0);
+  mask: radial-gradient(farthest-side, transparent calc(100% - 8px), black 0);
+  filter: blur(4px);
+  pointer-events: none;
+  animation: rotateGlow 3s linear infinite;
 }
 .team .member-intro {
   max-width: 60%;
@@ -228,6 +259,35 @@ img {
   background-color: #424242;
   border-radius: 20px;
   padding: 20px 18px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+.team .skill-card h3, .team .skill-card p {
+  transition: color 0.3s ease;
+}
+.team .skill-card img {
+  width: 50px;
+  transition: opacity 0.3s ease;
+}
+.team .skill-card:hover {
+  transform: scale(1.1);
+  background-color: #FFFFFF;
+  z-index: 10;
+}
+.team .skill-card:hover h3, .team .skill-card:hover p {
+  color: #121212;
+}
+.team .team-member-hero {
+  padding-bottom: 40px;
+}
+
+@keyframes rotateGlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
