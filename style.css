@@ -86,10 +86,23 @@ img {
 .hero {
   height: 100vh;
   position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background-image: url(images/background.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  filter: blur(8px);
+  transition: filter 1.2s ease;
+  z-index: 0;
+}
+.hero:hover::before {
+  filter: blur(0);
+}
+.hero {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,6 +110,8 @@ img {
 .hero .textbox {
   max-width: 480px;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 /* SERVICES A PROPOS */
