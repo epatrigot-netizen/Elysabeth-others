@@ -36,7 +36,7 @@ img {
 
 .btn, .btn-layout, .btn-light {
   border: 1px solid #FFFFFF;
-  color: white;
+  color: #FFFFFF;
   padding: 12px 34px;
   text-decoration: none;
   font-weight: 600;
@@ -50,7 +50,7 @@ img {
 .btn-light {
   background: #FFFFFF;
   color: #212121;
-  margin: 20px;
+  margin: 30px;
 }
 
 .btn-layout {
@@ -66,27 +66,27 @@ img {
   justify-content: space-between;
   align-items: center;
 }
-
-.navbar {
-  display: flex;
-  align-items: center;
-  gap: 2em;
-  color: white;
-}
-.navbar a {
+.header img {
+  width: 60px;
   padding: 20px;
 }
-.navbar a:hover {
-  border-bottom: 1px solid white;
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
 }
-.navbar img {
-  width: 60px;
+.header .navbar a {
+  padding: 30px;
+}
+.header .navbar a:hover {
+  border-bottom: 1px solid #FFFFFF;
 }
 
 .hero {
   height: 100vh;
   position: relative;
-  background-image: url(images/hero.jpg);
+  background-image: url(images/background.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -94,26 +94,24 @@ img {
   justify-content: center;
   align-items: center;
 }
-
-.textbox {
+.hero .textbox {
   max-width: 480px;
   text-align: center;
 }
 
 /* SERVICES A PROPOS */
 .services {
-  padding: 100px 40px;
   display: flex;
-  flex-direction: column;
-  text-align: center;
   justify-content: center;
   align-items: center;
+  padding: 100px 40px;
+  flex-direction: column;
+  text-align: center;
 }
 .services img {
   width: 310px;
 }
-
-.services-grid {
+.services .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
@@ -129,8 +127,7 @@ img {
 .projects h1 {
   margin-bottom: 80px;
 }
-
-.project-item {
+.projects .project-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -138,53 +135,44 @@ img {
   max-width: 1200px;
   margin: 0 auto 80px;
 }
-
-.project-infos {
-  text-align: center;
-}
-
-.project-item.reverse {
+.projects .project-item.reverse {
   direction: rtl;
 }
-
-.project-item.reverse > * {
+.projects .project-item.reverse > * {
   direction: ltr;
+}
+.projects .project-item .project-infos {
+  text-align: center;
 }
 
 /* TEAM ÉQUIPE */
 .team {
   padding: 100px 40px 80px;
 }
-
-.team-member {
+.team .team-member {
   max-width: 90%;
   margin: 0 auto 100px;
 }
-
-.avatar {
+.team .avatar {
   width: 180px;
 }
-
-.member-intro {
+.team .member-intro {
   max-width: 60%;
   margin: 0 auto;
   margin-bottom: 50px;
 }
-
-.skills-columns {
+.team .skills-columns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 80px;
   margin-bottom: 40px;
 }
-
-.skills-lists {
+.team .skills-lists {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 40px;
 }
-
-.skill-card {
+.team .skill-card {
   background-color: #424242;
   border-radius: 20px;
   padding: 20px 18px;

@@ -1,0 +1,10 @@
+@mixin flex-center($justify: center, $align:center, $gap: null){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+
+    @if $gap != null{
+        gap: $gap;
+    }
+}
+
