@@ -42,3 +42,56 @@
         }
 }
 
+@mixin card-neon-hover (
+    $scale: 1.1,
+    $border-width: 3px,
+    $gradient: linear-gradient(90deg, #ff7a00, #ff00aa, #bd00fb),
+    $border-radius: 20px,
+    $transition-duration: 0.3s,
+){
+    position: relative;
+    border-radius: $border-radius;
+    transition: transform $transition-duration cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    &::before{ content: '';
+        position: absolute;
+        inset: -#{$border-radius};
+        border-radius: $border-radius;
+        background-color: $gradient;
+        z-index: -1;
+        opacity: 1;
+
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    
+    padding: $border-width;
+    filter: blur($border-blur);
+    pointer-events: none;
+    animation: rotateGlow 3s linear infinite;
+    transition: opacity $transition-duration ease;
+
+    }
+
+    &:hover {
+        transform: scale($scale);
+        &::before{
+            opacity: 1;}
+    }
+
+
+}
+
+@keyframes rotateGlow {
+    0% {
+transform: rotate(0deg);
+        }
+    100% {
+transform: rotate(360deg);
+        }
+}
